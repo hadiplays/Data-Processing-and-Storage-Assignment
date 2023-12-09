@@ -9,7 +9,7 @@ To setup this project you will need:
 # Run Program
 To run the program (Assuming you cloned the repository on your local device):
 - Enter the src folder and open Main.java
-- Run the main class by clicking the green arrow on the top left corner of the IDE or hitting Shift + F10
+- Run the main class by clicking the green arrow on the top right corner of the IDE or hitting Shift + F10
 
 # Testing Functionalities:
 If you want to create or run unit tests:
