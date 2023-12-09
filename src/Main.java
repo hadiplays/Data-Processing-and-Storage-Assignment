@@ -1,53 +1,46 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) throws Exception {
-        //System.out.println("Hello world!");
+        Transaction transaction = new Transaction();
 
-        Transaction transaction = null;
+        System.out.println("Welcome, this is an in memory database with transaction support!");
+        System.out.println("Type \"QUIT\" to leave the database. Type \"HELP\" for all available commands");
+        Scanner scanner = new Scanner(System.in);
 
-// should return null, because A doesn’t exist in the DB yet
-        transaction.get("A");
+        boolean cont = true;
 
-// should throw an error because a transaction is not in progress
-        transaction.put("A", 5);
+        while (cont) {
+            System.out.print(">>> ");
+            String input = scanner.nextLine();
+            switch(input) {
+                case "BEGIN TRANSACTION" -> transaction.begin_transaction();
+                case "GET" -> {
+                    System.out.println("What key do you want to get?");
+                    String key = scanner.nextLine();
+                    System.out.println(transaction.get(key));
+                }
+                case "PUT" -> {
+                    System.out.println("What key and value do you want to put?");
+                    System.out.print("Key: ");
+                    String key = scanner.nextLine();
+                    System.out.print("Value: ");
+                    String value = scanner.nextLine();
 
-// starts a new transaction
-        transaction.begin_transaction();
-
-// set’s value of A to 5, but its not committed yet
-        transaction.put("A", 5);
-
-// should return null, because updates to A are not committed yet
-        transaction.get("A");
-
-// update A’s value to 6 within the transaction
-        transaction.put("A", 6);
-
-// commits the open transaction
-        transaction.commit();
-
-// should return 6, that was the last value of A to be committed
-        transaction.get("A");
-
-// throws an error, because there is no open transaction
-        transaction.commit();
-
-// throws an error because there is no ongoing transaction
-        transaction.rollback();
-
-// should return null because B does not exist in the database
-        transaction.get("B");
-
-// starts a new transaction
-        transaction.begin_transaction();
-
-// Set key B’s value to 10 within the transaction
-        transaction.put("B", 10);
-
-// Rollback the transaction - revert any changes made to B
-        transaction.rollback();
-
-// Should return null because changes to B were rolled back
-        transaction.get("B");
-
+                    transaction.put(key, Integer.parseInt(value));
+                }
+                case "COMMIT" -> transaction.commit();
+                case "ROLLBACK" -> transaction.rollback();
+                case "HELP" -> {
+                    System.out.println("All Commands:");
+                    System.out.println("BEGIN TRANSACTION");
+                    System.out.println("GET");
+                    System.out.println("PUT");
+                    System.out.println("COMMIT");
+                    System.out.println("ROLLBACK");
+                }
+                case "QUIT" -> cont = false;
+            }
+        }
     }
 }

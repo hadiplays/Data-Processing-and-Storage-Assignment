@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.Map;
 
 public class Transaction implements inMemoryDB {
     HashMap<String, Integer> dB = new HashMap<String, Integer>();
@@ -10,8 +9,16 @@ public class Transaction implements inMemoryDB {
     // Will return the value associated with the key or null if the key does not exist
     // Can be called anytime even when a transaction is not in progress
     @Override
-    public int get(String key) {
-        return dB.get(key);
+    public Object get(String key) {
+        return dB.getOrDefault(key, null);
+    }
+
+    public static Integer returnIntOrNull(boolean condition) {
+        if (condition) {
+            return 42; // Or any other integer value
+        } else {
+            return null;
+        }
     }
 
     // Will create a new key with the provided value if a key does not exist.
