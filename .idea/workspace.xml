@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61123991-8f15-4017-afed-2e0ceb30441f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Data Processing and Storage Assignment.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Data Processing and Storage Assignment.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Transaction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Transaction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/inMemoryDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/inMemoryDB.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +64,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="Data Processing and Storage Assignment" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TransactionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Data Processing and Storage Assignment" />
       <option name="PACKAGE_NAME" value="" />
@@ -85,16 +86,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TransactionTest" />
       <option name="METHOD_NAME" value="commitWithout" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TransactionTest.getReturnNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Data Processing and Storage Assignment" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TransactionTest" />
-      <option name="METHOD_NAME" value="getReturnNull" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -122,11 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.TransactionTest" />
         <item itemvalue="JUnit.TransactionTest.putWithCommit" />
         <item itemvalue="JUnit.TransactionTest.transactionNotInProgress" />
         <item itemvalue="JUnit.TransactionTest.commitWithout" />
-        <item itemvalue="JUnit.TransactionTest.getReturnNull" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +131,7 @@
       <updated>1701821165563</updated>
       <workItem from="1701821165807" duration="3716000" />
       <workItem from="1702012747970" duration="3599000" />
-      <workItem from="1702019176603" duration="11327000" />
+      <workItem from="1702019176603" duration="12756000" />
     </task>
     <servers />
   </component>

@@ -13,14 +13,6 @@ public class Transaction implements inMemoryDB {
         return dB.getOrDefault(key, null);
     }
 
-    public static Integer returnIntOrNull(boolean condition) {
-        if (condition) {
-            return 42; // Or any other integer value
-        } else {
-            return null;
-        }
-    }
-
     // Will create a new key with the provided value if a key does not exist.
     // Otherwise, it will update the value of an existing key.
     @Override
